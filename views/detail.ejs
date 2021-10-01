@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+   
+    <title> Detalhes</title>
+</head>
+<body id="detalhes">
+    <header>
+        <nav>
+            <button class="pokedex-mode black-button"><a href="./">HOME</a></button>
+            <button class="game-mode black-button"><a href="./cadastro">CADASTRAR</a></button>
+        </nav>
+        <h1>Detalhes</h1>
+    </header>
+    <main>
+        
+       <% pokemons.forEach(item => { %>
+        <ul id="det">
+                <img id="tela" src="<%= item.img %>"/>
+                <section id="poke"><h2>Nome: </h2><article><%= item.name %></article></section>
+                <section id="poke"><h2>Tipo: </h2><article><%= item.type %></article></section>
+        </ul>
+        <% }); %>
+    </main>
+<script src="/js/script.js"></script>
+</body>
+</html>

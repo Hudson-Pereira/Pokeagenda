@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="pokedex-mode black-button"><a href="./">HOME</a></button>
+            <button class="game-mode black-button"><a href="./cadastro">CADASTRAR</a></button>
+        </nav>
+        <h1>CADASTRO</h1>
+    </header>
+    <main>
+        <form id="dados" action="/details" method="POST">
+            <label for="imagem"><p>IMAGEM</p></label>
+            <article>
+                <input type="text" id= "imagem" name="imagem" placeholder="URL DA IMAGEM">
+            </article>
+            <label for="name"><p>NOME</p></label>   
+            <article>
+                <input type="text" id="name" name="name" placeholder="NOME DO POKEMON">
+            </article>
+            <label for="num"><p>NUMERO</p></label>
+            <article>
+                <input type="text" id="num" name="num" placeholder="NUMERO DO POKEMON">
+            </article>
+            <label for="type"><p>TIPO</p></label>
+            <article>
+                <input type="text" id="type" name="type" placeholder="TIPO DO POKEMON">
+            </article>
+            <label for="desc"><p>DESCRIÇÃO</p></label>
+            <article>
+                <input type="text" id="desc" name="desc" placeholder="DESCRIÇÃO DO POKEMON">
+            </article>
+            <label for="hab"><p>HABILIDADE</p></label>
+            <article>
+                <input type="text" id="hab" name="hab" placeholder="HABILIDADE DO POKEMON">
+            </article>
+            <label for="alt"><p>ALTURA</p></label>
+            <article>
+                <input type="text" id="alt" name="alt" placeholder="ALTURA DO POKEMON">
+            </article>
+            <label for="peso"><p>PESO</p></label>
+            <article>
+                <input type="text" id="peso" name="peso" placeholder="PESO DO POKEMON">
+            </article>
+            <button type="submit" id="enviar">Enviar</button>
+        </section>
+    </main>
+<script src="../public/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <% if(message !== "") { %>
+        <section id="message">
+            <p><%= message %></p><span id="close">&times;</span>
+        </section>
+        <% } %>
+    <header>
+        <h1>Formulário de teste</h1>
+    </header>
+    <main>
+
+        <section id="form">
+            <form action="/recebeform" method="POST"> <!--para onde e metodo que vai-->
+                <article>
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="input_nome" placeholder="Digite seu nome aqui">
+                </article>
+                <article>
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" id="input_nome" placeholder="Digite seu e-mail aqui">
+                </article>
+                <article>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="input_nome" placeholder="Digite seu e-mail aqui">
+                </article>
+                <button type="submit" id="enviar">Enviar</button> <!--botao para submit obrigatorio-->
+            </form>
+        </section>
+    </main>
+<script src="/js/script.js"></script>
+</body>
+</html>
