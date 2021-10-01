@@ -6,9 +6,6 @@ const tipo = document.querySelector("#tipo");
 const evo1 = document.querySelector("#evo1");
 const evo2 = document.querySelector("#evo2");
 const evo3 = document.querySelector("#evo3");
-const close = document.querySelector("#close");
-const message = document.querySelector("#message");
-
 
 
 left.addEventListener("click", function() {
@@ -102,6 +99,3 @@ evo1.addEventListener("click", function(){
     };
 });
 
-close.addEventListener("click", () => {
-    message.style.display = "none"
-});

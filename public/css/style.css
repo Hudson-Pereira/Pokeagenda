@@ -306,3 +306,7 @@ h2{
   display: flex;
   background-color: #9fdab1;
 }
+
+#close{
+  font-size: 50px;
+}
