@@ -304,9 +304,12 @@ h2{
 
 #message{
   display: flex;
-  background-color: #9fdab1;
+  justify-content: center;
+  font-family: 'Noto Serif', serif;
+  background-color: rgb(104, 10, 10);
 }
 
 #close{
-  font-size: 50px;
+  display: flex;
+  font-size: 30px;
 }
