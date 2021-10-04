@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, "public"))); //set public como raiz
 app.use(express.urlencoded());
 
 //variaveis
-let pokemons = [{img: "/img/bulba.jpg", num:"001", name: "Bulbassauro",type: "Planta",desc: "DescricaoHá uma semente de planta em suas costas desde o dia em que o Pokémon nasceu. A semente cresce lentamente.", alt: "0.7",peso: "6.9", hab:"Overgrow"},
+let pokemons = [{img: "/img/bulba.jpg", num:"001", name: "Bulbassauro",type: "Planta",desc: "Há uma semente de planta em suas costas desde o dia em que o Pokémon nasceu. A semente cresce lentamente.", alt: "0.7",peso: "6.9", hab:"Overgrow"},
 {img: "/img/ivi.jpeg", num:"002", name: "Ivysauro",type: "Planta",desc: "Quando o bulbo em suas costas fica grande, parece perder a capacidade de ficar em pé sobre as patas traseiras.", alt: "1.0",peso: "13.0", hab:"Overgrow"},
 {img: "/img/venu.jpg", num:"003", name: "Venusauro",type: "Planta",desc: "Sua planta floresce quando está absorvendo energia solar. Ele permanece em movimento para buscar a luz solar.", alt: "2.0",peso: "100.0", hab:"Overgrow"},
 {img: "/img/charmander.jpg", num:"004", name: "Charmander",type: "Fogo",desc: "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta da cauda.", alt: "0.6",peso: "8.5", hab:"Chamas"},
@@ -43,6 +43,11 @@ app.get("/detail", (req, res) => {
     res.render("detail", {pokemons: pokemons});
 });
 
+app.get("/pokemon/:id", (req, res) => {
+        const title = pokemons[req.params.id].name;
+    res.render("pokemon", { titulo: title, pokemon: pokemons[req.params.id]}); 
+  });
+
 app.post("/details", (req, res) => {
     
     const {imagem, name, num, type, desc, hab, alt, peso} = req.body;
@@ -53,7 +58,7 @@ app.post("/details", (req, res) => {
     message = `Pokemon ${name} cadastrado com sucesso`;
     setTimeout(() => {
         message = "";
-    }, 2000);
+        }, 5000);
     console.log(pokemons);
     res.render("details", {pokemons: pokemons, message: message});
 });

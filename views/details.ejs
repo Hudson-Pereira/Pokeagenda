@@ -28,7 +28,8 @@
   
    <% pokemons.forEach(item => { %>
        <ul id="det">
-               <img id="tela" src="<%= item.img %>"/>
+               <a href="pokemon/<%= pokemons.indexOf(item) %>">
+               <img id="tela" src="<%= item.img %>" alt="<%= item.name %>"/></a>
                <section id="poke"><h2>Nome: </h2><article><%= item.name %></article></section>
                <section id="poke"><h2>Tipo: </h2><article><%= item.type %></article></section>
        </ul>
