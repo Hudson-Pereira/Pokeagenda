@@ -41,6 +41,7 @@ h1{
   
   .camera-display {
     display: flex;
+    justify-content: center;
     background-color: #E5F6FC;
     border-radius: 5%;
     border: 30px solid #E6E6E6;
