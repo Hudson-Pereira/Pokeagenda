@@ -105,7 +105,7 @@ router.get("/cadastro", (req, res) => {
 });
 
 router.get("/catalogo", (req, res) => {
-  res.status(200).render("catalogo", { pokemons: pokemons });
+  res.status(200).render("catalogo", { pokemons });
 });
 
 router.get("/pokemon/:id", (req, res) => {
